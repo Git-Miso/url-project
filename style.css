@@ -1,0 +1,103 @@
+div.title{
+  font-size: 38px;
+  font-family: Poppins, sans-serif;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 39px;
+  margin-left: 39px;
+  margin-bottom: 50px;
+}
+
+div.article{
+  margin-left: auto;
+  margin-right: auto;
+  width: 720px;
+  border: solid 8px #f5f5f5;
+}
+
+div.art_title{
+  background-color: white;
+  position: relative;
+  width: 170px;
+  height: 25px;
+  text-align: center;
+  top: -22px;
+  left: 50px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+p.text{
+  font-family: Lucida;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+button.domain{
+  font-size: 30px;
+  border: none;
+  background-color: #EEEEEE;
+}
+
+div.border_url{
+  border-radius: 25px;
+  background: #EEEEEE;
+  width: 1100px;
+  height: 75px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+button:hover{
+  animation: domain 1s infinite;
+}
+
+@keyframes domain {
+  0%{
+    font-size: 35px;
+  }
+  50%{
+    font-size: 37px;
+  }
+  100%{
+    font-size: 35px;
+  }
+}
+
+button:focus{
+  outline: none;
+}
+
+header.topbar{
+  background-color: #5C6BC0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  color: #5C6BC0;
+  text-align: right;
+}
+
+article {
+  margin-top: 100px;
+  padding: 10px;
+}
+
+textarea.validator {
+  resize: none;
+  width: 600px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 25px;
+  text-align: center;
+}
+
+textarea.validator:focus{
+  outline: none;
+}
+
+p.title {
+  font-size: 40px;
+}
