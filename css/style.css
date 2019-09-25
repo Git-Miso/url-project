@@ -54,13 +54,13 @@ button:hover{
 
 @keyframes domain {
   0%{
-    font-size: 35px;
+    color: #5C6BC0;
   }
   50%{
-    font-size: 37px;
+    color: #9E9E9E;
   }
   100%{
-    font-size: 35px;
+    color: #5C6BC0;
   }
 }
 
