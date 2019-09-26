@@ -24,8 +24,7 @@
 </head>
 
 <body>
-
-	<header style="position:fixed;" class="topbar">_</header>
+	<header style="z-index: 5; position:fixed;" class="topbar">_</header>
 
 	<div class="title">Was ist eine URL?</div>
 	<div class="article">
@@ -40,22 +39,39 @@
 			URLs werden jeweiles nur <b>einmal</b> vergeben, sie sind also eindeutig.<br>
 		</p>
 	</div>
-	<div class="title">Beispiel URL:</div>
-	<div class="center">
-		<div class="border_url center">
-			<img style="left: -10px; top:12px; position: relative; width: 50px; height:50px" alt="search" src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png">
-			<button class="domain" style="color:#5C6BC0;" onclick="protokollText()">https://</button>
-			<button class="domain" style="color:#5C6BC0;" onclick="domainText()">beispielseite.de/</button>
-			<button class="domain" style="color:#5C6BC0;" onclick="pfadText()">seite/</button>
-			<button class="domain" style="color:#5C6BC0;" onclick="queryText()">?name=max</button>
-			<button class="domain" style="color:#5C6BC0;" onclick="fragmentText()">#top</button>
+
+	<article class="center" style="width: 99%; padding-bottom: 70px; padding-top: 60px; background-color: #9FA8DA">
+		<div class="title">Die Bestandteile einer URL</div>
+		<div class="center">
+			<div class="border_url center">
+				<img style="left: -10px; top:12px; position: relative; width: 50px; height:50px" alt="search" src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png">
+				<button class="domain" style="color:#5C6BC0;" onclick="protokollText()">https://</button>
+				<button class="domain" style="color:#5C6BC0;" onclick="domainText()">beispielseite.de/</button>
+				<button class="domain" style="color:#5C6BC0;" onclick="pfadText()">seite/</button>
+				<button class="domain" style="color:#5C6BC0;" onclick="queryText()">?name=max</button>
+				<button class="domain" style="color:#5C6BC0;" onclick="fragmentText()">#top</button>
+			</div>
 		</div>
-	</div>
-	<br>
-	<br>
+		<br>
+		<br>
+		<div class="article" style="background-color: white;">
+			<p class="text" id="text">
+				Wähle eins der Elemente aus der URL, um genaure Infos zu erhalten.
+			</p>
+		</div>
+	</article>
+
+	<div class="title">Was ist eine URL?</div>
 	<div class="article">
-		<p class="text" id="text">
-			Wähle eins der Elemente aus der URL, um genaure Infos zu erhalten.
+		<div class="art_title">Der Begriff</div>
+		<p class="text">
+			<b>URL</b>(Uniform Resource Locater) <br>
+			<br>
+			Die URL ist die Adresse, welche oben im Browser eingegeben wird, sie wird auch Internetadresse genannt. <br>
+			Ein Beispiel für eine URL ist youtube.com<br>
+			Die URL wird dann auf die gewünschte Seite bringen.
+			<br>
+			URLs werden jeweiles nur <b>einmal</b> vergeben, sie sind also eindeutig.<br>
 		</p>
 	</div>
 
@@ -87,7 +103,7 @@
 		</p>
 	</div>
 	<footer>
-		<div style="background-color: #F5F5F5; padding-top: 10px; padding-bottom: 10px; margin-top: 30px;">
+		<div style="border: solid 3px #F5F5F5; margin-bottom: 0px;background-color: #F5F5F5; padding-top: 10px; padding-bottom: 10px; margin-top: 30px;">
 		<a style="color: gray; text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">von Lukas, Jonas, Viktor und Vincent</a>
 	</div>
 	</footer>
