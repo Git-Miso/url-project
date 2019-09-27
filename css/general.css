@@ -20,6 +20,7 @@ body{
 
 /* -------------------------------------------------------------------------- */
 
+
 .coloredbox,.coloredbox2{
   width: 99%;
   padding-bottom: 70px;
@@ -47,6 +48,7 @@ body{
   justify-content: center;
   align-items: center;
 }
+
 
 body {
   font-family: arial;
@@ -127,4 +129,84 @@ button:hover,
 div.error {
   margin-top: 10px;
   color: red;
+}
+
+.square {
+height: 5px;
+width: 290px;
+background-color: #555;
+  transform: rotate(0deg);
+}
+.square2 {
+height: 5px;
+width: 100px;
+background-color: #555;
+  transform: rotate(90deg);
+}
+.square2:hover{
+click();
+}
+.square_anim{
+ background-image: repeating-linear-gradient(
+  -45deg,
+  hsl(215,30%,60%) 0%,  /* blau */
+  hsl(120,30%,90%) 15%, /* grün */
+  hsl(30,50%,90%) 30%,  /* rosa */
+  hsl(215,30%,60%) 45%  /* blau */);
+animation: animation2 5s infinite;
+animation-timing-function: linear;
+background-size: 30%;
+}
+.square_anim2{
+ background-image: repeating-linear-gradient(
+  -45deg,
+  hsl(215,30%,60%) 0%,  /* blau */
+  hsl(120,30%,90%) 15%, /* grün */
+  hsl(30,50%,90%) 30%,  /* rosa */
+  hsl(215,30%,60%) 45%  /* blau */);
+animation: animation3 5s infinite;
+animation-timing-function: linear;
+background-size: 30%;
+}
+@keyframes animation3{
+  0% {background-position: 85%}
+  100% {background-position: 0%}
+}
+@keyframes animation2{
+  0% {background-position: 0%}
+  100% {background-position: 85%}
+}
+
+.square2_anim{
+ background-image: repeating-linear-gradient(
+  -45deg,
+  hsl(215,30%,60%) 0%,  /* blau */
+  hsl(120,30%,90%) 15%, /* grün */
+  hsl(30,50%,90%) 30%,  /* rosa */
+  hsl(215,30%,60%) 45%  /* blau */);
+animation: animation4 1s infinite;
+animation-timing-function: linear;
+background-size: 50%;
+}
+.square2_anim2{
+ background-image: repeating-linear-gradient(
+  -45deg,
+  hsl(215,30%,60%) 0%,  /* blau */
+  hsl(120,30%,90%) 15%, /* grün */
+  hsl(30,50%,90%) 30%,  /* rosa */
+  hsl(215,30%,60%) 45%  /* blau */);
+animation: animation5 1s infinite;
+animation-timing-function: linear;
+background-size: 50%;
+}
+@keyframes animation5{
+  0% {background-position: 100%}
+  100% {background-position: 0%}
+}
+@keyframes animation4{
+  0% {background-position: 0%}
+  100% {background-position: 100%}
+}
+.myBtn:focus{
+  outline: none;
 }
