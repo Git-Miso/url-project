@@ -1,3 +1,35 @@
+/* style */
+.domain{
+  color: #69797E;  /* #5C6BC0 */
+}
+body{
+  background-image: linear-gradient(95deg, white 90%, #F5F5F5 10%);
+}
+.coloredbox{
+  /*background-color: #2D7D9A; /* #9FA8DA */
+  background-image: linear-gradient(110deg,#0099BC 40%, #2D7D9A 80%);
+}
+.coloredbox2{
+  /*background-color: #2D7D9A;/* #9FA8DA */
+  background-image: linear-gradient(110deg,#0099BC 40%, #2D7D9A 80%);
+}
+.topbar{
+  background-color: #333132; /* #5C6BC0 */
+  color: #333132;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.coloredbox,.coloredbox2{
+  width: 99%;
+  padding-bottom: 70px;
+  padding-top: 60px;
+  text-align: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .tableCenter {
   margin-left:auto;
   margin-right:auto;
@@ -18,7 +50,6 @@
 
 body {
   font-family: arial;
-  background-image: linear-gradient(110deg, white 80%, #F5F5F5 60%);
 }
 
 .elem {

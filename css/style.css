@@ -49,6 +49,7 @@ div.border_url{
 }
 
 button:hover{
+  text-decoration: underline;
   animation: domain 1s infinite;
 }
 
@@ -69,12 +70,10 @@ button:focus{
 }
 
 header.topbar{
-  background-color: #5C6BC0;
   position: fixed;
   top: 0px;
   left: 0px;
   width: 100%;
-  color: #5C6BC0;
   text-align: right;
 }
 
