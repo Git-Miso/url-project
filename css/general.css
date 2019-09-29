@@ -20,6 +20,9 @@ body{
 
 /* -------------------------------------------------------------------------- */
 
+html{
+  scroll-behavior: smooth;
+}
 
 .coloredbox,.coloredbox2{
   width: 99%;

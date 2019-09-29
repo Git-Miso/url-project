@@ -25,7 +25,7 @@
 <body>
 	<header style="z-index: 5; position:fixed;" class="topbar">_</header>
 
-	<div class="title">Was ist eine URL?</div>
+	<div class="title" id="top" >Was ist eine URL?</div>
 	<div class="article">
 		<div class="art_title">Der Begriff</div>
 		<p class="text">
@@ -59,34 +59,6 @@
 			</p>
 		</div>
 	</article>
-
-	<div class="title">._.</div>
-	<div class="article">
-		<div class="art_title">Der Begriff</div>
-		<p class="text">
-			<b>URL</b>(Uniform Resource Locater) <br>
-			<br>
-			Die URL ist die Adresse, welche oben im Browser eingegeben wird, sie wird auch Internetadresse genannt. <br>
-			Ein Beispiel für eine URL ist youtube.com<br>
-			Die URL wird dann auf die gewünschte Seite bringen.
-			<br>
-			URLs werden jeweiles nur <b>einmal</b> vergeben, sie sind also eindeutig.<br>
-		</p>
-	</div>
-
-	<article class="coloredbox2">
-		<p class="title">URL Validator</p>
-	  <textarea id="urlArea" class="validator" placeholder="Text hier tippen..."></textarea>
-	</article>
-
-	<script>
-	var text = $('#urlArea');
-	text.on('change drop keydown cut paste', function() {
-		text.height('auto');
-		text.height(text.prop('scrollHeight'));
-		check(text);
-	});
-	</script>
 
 	<div class="title">Was ist das DNS?</div>
 	<div class="article">
@@ -123,6 +95,55 @@
 	</tr>
 	</table>
 	</div>
+
+	<article class="coloredbox2">
+		<p class="title">URL Validator</p>
+	  <textarea id="urlArea" class="validator" placeholder="Text hier tippen..."></textarea>
+	</article>
+
+	<script>
+	var text = $('#urlArea');
+	text.on('change drop keydown cut paste', function() {
+		text.height('auto');
+		text.height(text.prop('scrollHeight'));
+		check(text);
+	});
+	</script>
+
+
+		<div class="title">Ein HTML Sprunglink</div>
+		<div class="article">
+			<div class="art_title">Der Begriff</div>
+			<p class="text">
+				Bei einem HTML Sprunglink kann zu einer gewissen Stelle im Text gesprungen werden. <br>
+				Die Stelle zu der gesprungen wird, ist festgelegt durch eine ID. <br>
+				<div class="article2"> Bsp: <br>
+				<<span style="color: blue;"> div </span> id=“zielort“>Ziel < <span style="color: blue;"> div </span> ><br></div>
+				 <br>
+				Danach muss festgelegt werden von wo zu dieser Stelle gesprungen werden soll, also zum Beispiel von einem Inhaltsverzeichnis. <br>
+				Dazu benutzt man den href und schreibt in die Anführungszeichen #id. <br>
+				Für die id wird die id des Zielobjekts eingefügt. <br>
+				<br>
+				<div class="article2" style="margin-top: 50px;"> <<span style="color: green;">a</span> href="#zielort">zum Anfang der Seite <<span style="color: green;">/a</span>> <br> </div>
+				 <br>
+				Wenn man im Body-Tag noch „scroll-behavior: smooth;“ einfügt, sorgt dies für einen scrollenden Übergand anstatt eines Sprunges. <br>
+				<a href="#top">(Ausprobieren)</a><br>
+				 <br>
+				 <div class="article2">
+				<<span style="color: red;"> style </span> > <br>
+					html{ <br>
+						Scroll-behavior: smooth; <br>
+					} <br>
+				<<span style="color: red;"> style </span> > <br>
+
+				<<span style="color: blue;"> div </span> id=“zielort“> Ziel < <span style="color: blue;"> div </span> > <br>
+
+				<<span style="color: green;">a </span> href="#zielort">zum Anfang der Seite<<span style="color: green;">/a</span>> <br>
+			</p>
+		</div>
+		<br>
+		</div>
+
 	<script src="js/script.js" charset="utf-8"></script>
 	<footer>
 		<div style="border: solid 3px #F5F5F5; margin-bottom: 0px;background-color: #F5F5F5; padding-top: 10px; padding-bottom: 10px; margin-top: 30px;">
