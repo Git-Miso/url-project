@@ -9,7 +9,7 @@
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <![endif]-->
 
-	<title>URL</title>
+	<title>URL - Einfache Erklärung</title>
 
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -25,7 +25,20 @@
 <body>
 	<header style="z-index: 5; position:fixed;" class="topbar">_</header>
 
-	<div class="toptitle" id="top" style="background-color: #F5F5F5; height: 70px;" >Was ist eine URL?</div>
+	<div class="inhalt" style="position: fixed; left: 0px; top: 200px; width: 200px;">
+		<div class="inhalt-title">Inhalt</div>
+		<p class="text">
+			<ol class="inhalt-content" style="list-style-type:disc; position: relative; top: -20px;">
+				<li class="lii"><a href="#top">Anfang</a></li>
+				<li class="lii"><a href="#url-aufbau">URL</a></li>
+				<li class="lii"><a href="#dns">DNS</a></li>
+				<li class="lii"><a href="#validator">Validator</a></li>
+				<li class="lii"><a href="#validatorStatus">Sprunglink</a></li>
+			</ol>
+		</p>
+	</div>
+
+	<div class="toptitle" id="top" style="background-color: #F5F5F5; height: 70px;">Was ist eine URL?</div>
 	<div class="article">
 		<div class="art_title">Der Begriff</div>
 		<p class="text">
@@ -34,27 +47,29 @@
 			Die URL ist die Adresse, welche oben im Browser eingegeben wird, sie wird auch Internetadresse genannt. <br>
 			Ein Beispiel für eine URL ist youtube.com<br>
 			Die URL wird dann auf die gewünschte Seite bringen.
-			<br>
+			<br id="url-aufbau">
 			URLs werden jeweiles nur <b>einmal</b> vergeben, sie sind also eindeutig.<br>
 		</p>
 	</div>
 
 	<article class="coloredbox">
-		<div class="title">Die Bestandteile einer URL</div>
+		<div class="title" style="color:white; font: exo;">Die Bestandteile einer URL</div>
 		<div class="center">
 			<div class="border_url center">
 				<img style="left: -10px; top:12px; position: relative; width: 50px; height:50px" alt="search" src="img/search.png">
-				<button class="domain" onclick="protokollText()">https://</button>
-				<button class="domain" onclick="domainText()">beispielseite.de</button>
-				<button class="domain" onclick="portText()">:25565/</button>
-				<button class="domain" onclick="pfadText()">seite/</button>
-				<button class="domain" onclick="queryText()">?name=max</button>
-				<button class="domain" onclick="fragmentText()">#top</button>
+				<button class="domain" onclick="changeText(protokollText)">https://</button>
+				<button class="domain" onclick="changeText(subdomainText)">lu.</button>
+				<button class="domain" onclick="changeText(domainText)">beispielseite</button>
+				<button class="domain" onclick="changeText(topdomainText)">.de</button>
+				<button class="domain" onclick="changeText(portText)">:25565/</button>
+				<button class="domain" onclick="changeText(pfadText)">seite/</button>
+				<button class="domain" onclick="changeText(queryText)">?name=max</button>
+				<button class="domain" onclick="changeText(fragmentText)">#top</button>
 			</div>
 		</div>
 		<br>
 		<br>
-		<div class="article" style="background-color: white;">
+		<div id="dns"  class="article" style="background-color: white;">
 			<p class="text" id="text">
 				Wähle eins der Elemente aus der URL, um genaure Infos zu erhalten.
 			</p>
@@ -79,7 +94,7 @@
 	</div>
 
 	<!-- DNS Animation -->
-	<div class="article" style="margin-top: 50px;">
+	<div class="article" style="margin-top: 50px;" >
 		<table class="center" style="margin-bottom: 150px;margin-top: 50px;">
 			<tr>
 				<td>Dein Computer</td>
@@ -89,36 +104,39 @@
 				<td align="center">DNS</td>
 			</tr>
 			<tr>
-				<td><img style="position:relative;" height="120px" width="120px" src="https://images.vexels.com/media/users/3/128243/isolated/preview/a1a5b9494d50bb3754bba547f2d88487-computer-monitor-flat-icon-by-vexels.png" ></td><td>
-			<div id="square" style="position:relative;  top: 5px;" class="square"></div></td><td>
-			<img style="position:relative; top: 0px;" height="100px" width="100px" src="http://www.pngmart.com/files/5/Server-PNG-Transparent.png" ></td>
-		</tr>
+				<td><img style="position:relative;" height="120px" width="120px" src="img/pc.png" alt="Dein Computer"></td>
 				<td>
-					<div style="position:relative; left: 10px; top: 40px;" class="square2" id="square2"></div>
+					<div id="square" style="position:relative;  top: 5px;" class="square"></div>
 				</td>
+				<td>
+					<img style="position:relative; top: 0px;" height="100px" width="100px" src="img/server.png" alt="DNS-Server"></td>
+			</tr>
+			<td>
+				<div style="position:relative; left: 10px; top: 40px;" class="square2" id="square2"></div>
+			</td>
 			</tr>
 			<tr>
-				<td><img style="position:relative; top: 80px;" height="100px" width="100px" src="http://www.pngmart.com/files/5/Server-PNG-Transparent.png" >
+				<td><img style="position:relative; top: 80px;" height="100px" width="100px" src="img/server.png" alt="Webserver">
 				<td style="position:relative; left: -120px; top: -30px;" id="webadresse2"></td>
 				</td>
 			</tr>
 
 			<tr>
-					<td style="position:relative; top: 50px; text-align:center;">Webserver</td><td style="position:relative; top: 50px; left:210px; text-align:center;">Nächster Schritt</td>
-					<td><button style="background-color: white;" height="50px" width="50px" id="myBtn"><img class="myBtn" src="https://image.flaticon.com/icons/png/512/122/122632.png" height="50px" width="50px"></img></button></td>
+				<td style="position:relative; top: 50px; text-align:center;">Webserver</td>
+				<td style="position:relative; top: 50px; left:210px; text-align:center;">Nächster Schritt</td>
+				<td id="validator"><button style="background-color: white;" height="50px" width="50px" id="myBtn"><img class="myBtn" src="img/arrow.png" height="50px" width="50px" alt="weiter"></img></button></td>
 		</table>
 	</div>
 
 	<article class="coloredbox2">
-		<p class="title">URL Validator</p>
+		<p class="title" style="color:white; font-weight: bold;">URL Validator</p>
 		<textarea id="urlArea" class="validator" placeholder="Text hier tippen..."></textarea>
+		<p id="validatorStatus" style="color: white"><i>Keine URL erkannt.</i></p>
 	</article>
 
 	<script>
 		var text = $('#urlArea');
-		text.on('change drop keydown cut paste', function() {
-			check(text);
-		});
+		text.on('change drop keydown cut paste', () => setTimeout(() => check(), 5));
 	</script>
 
 
@@ -128,40 +146,46 @@
 		<p class="text">
 			Bei einem HTML Sprunglink kann zu einer gewissen Stelle im Text gesprungen werden. <br>
 			Die Stelle zu der gesprungen wird, ist festgelegt durch eine ID. <br>
-			<div class="article2"> Bsp: <br>
-				<<span style="color: blue;"> div </span> id=“zielort“>Ziel < <span style="color: blue;"> div </span> ><br>
-			</div>
-			<br>
+		</p>
+		<div class="article2"> Bsp: <br>
+		<!-- << ist kein Fehler, sondern dient zur Codeanzeige auf der Website -->
+			<<span style="color: blue;"> div </span> id=“zielort“>Ziel < <span style="color: blue;"> div </span> ><br>
+		</div>
+		<br>
+		<p class="text">
 			Danach muss festgelegt werden von wo zu dieser Stelle gesprungen werden soll, also zum Beispiel von einem Inhaltsverzeichnis. <br>
 			Dazu benutzt man den href und schreibt in die Anführungszeichen #id. <br>
-			Für die id wird die id des Zielobjekts eingefügt. <br>
-			<br>
-			<div class="article2" style="margin-top: 50px;">
-				<<span style="color: green;">a</span> href="#zielort">zum Anfang der Seite <<span style="color: green;">/a</span>> <br>
-			</div>
-			<br>
+			Für die id wird die id des Zielobjekts eingefügt.
+		</p>
+		<div class="article2" style="margin-top: 50px;">
+			<<span style="color: green;">a</span> href="#zielort">zum Anfang der Seite <<span style="color: green;">/a</span>> <br>
+		</div>
+		<br>
+		<p class="text">
 			Wenn man im Body-Tag noch „scroll-behavior: smooth;“ einfügt, sorgt dies für einen scrollenden Übergand anstatt eines Sprunges. <br>
 			<a href="#top">(Ausprobieren)</a><br>
-			<br>
-			<div class="article2">
-				<<span style="color: red;"> style </span> > <br>
-					html{ <br>
-					Scroll-behavior: smooth; <br>
-					} <br>
-					<<span style="color: red;"> style </span> > <br>
-
-						<<span style="color: blue;"> div </span> id=“zielort“> Ziel < <span style="color: blue;"> div </span> > <br>
-
-						<<span style="color: green;">a </span> href="#zielort">zum Anfang der Seite<<span style="color: green;">/a</span>> <br>
 		</p>
-	</div>
-	<br>
+		<br>
+		<div class="article2">
+			<!-- << ist kein Fehler, sondern dient zur Codeanzeige auf der Website -->
+			<span style="color: red;"> style </span> > <br>
+				html{ <br>
+				Scroll-behavior: smooth; <br>
+				} <br>
+				<<span style="color: red;"> style </span> > <br>
+
+					<<span style="color: blue;"> div </span> id=“zielort“> Ziel < <span style="color: blue;"> div </span> > <br>
+
+							<<span style="color: green;">a </span> href="#zielort">zum Anfang der Seite<<span style="color: green;">/a</span>> <br>
+									</p>
+		</div>
+		<br>
 	</div>
 
 	<script src="js/script.js" charset="utf-8"></script>
 	<footer>
-		<div style="border: solid 3px #F5F5F5; margin-bottom: 0px;background-color: #F5F5F5; padding-top: 10px; padding-bottom: 10px; margin-top: 30px;">
-			<a style="color: gray; text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">von Lukas, Jonas, Viktor und Vincent</a>
+		<div style="border: solid 3px #F5F5F5; margin-bottom: 0px; padding-bottom: 0px; background-color: #F5F5F5; padding-top: 10px; padding-bottom: 10px; margin-top: 30px;">
+			<a style="padding-left: 10px; color: gray; text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">von Lukas, Jonas, Viktor und Vincent</a>
 		</div>
 	</footer>
 </body>

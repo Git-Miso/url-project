@@ -20,8 +20,37 @@ body{
 
 /* -------------------------------------------------------------------------- */
 
+@font-face { font-family: exo; src: url('Exo-Bold.ttf'); }
+
 html{
   scroll-behavior: smooth;
+}
+
+.inhalt-content {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.lii{
+  padding: 5px;
+}
+
+.inhalt:hover .inhalt-content {
+  display: block;
+}
+
+.inhalt-title{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  background: #FFA000;
+   top: 0;
+   left: 10px;
+   font-weight: bold;
 }
 
 .coloredbox,.coloredbox2{
