@@ -8,6 +8,15 @@ div.title{
   margin-bottom: 50px;
 }
 
+div.toptitle{
+font-size: 38px;
+font-family: Poppins, sans-serif;
+text-align: center;
+font-weight: bold;
+margin-bottom: 50px;
+padding-top: 40px;
+}
+
 div.article{
   margin-left: auto;
   margin-right: auto;
