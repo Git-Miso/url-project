@@ -1,4 +1,4 @@
-const expression = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi;
+const expression = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
 const regex = new RegExp(expression);
 
 function check(textarea) {
@@ -11,7 +11,7 @@ function check(textarea) {
   if(urls == null || urls.length <= 0) {
     display.innerHTML = "<i>Keine URL erkannt.</i>";
   } else if(urls.length == 1) {
-    display.innerHTML = "Erkannte URL:<br>" + urls[0];
+    display.innerHTML = "Erkannte URL:<br><i>" + urls[0] + "</i>";
   } else {
     let html = "Erkannte URLs:<br>";
     let i = 0;

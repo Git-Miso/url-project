@@ -25,18 +25,17 @@
 <body>
 	<header style="z-index: 5; position:fixed;" class="topbar">_</header>
 
-	<div class="inhalt" style="position: fixed; left: 0px; top: 200px; width: 200px;">
 		<div class="inhalt-title">Inhalt</div>
-		<p class="text">
-			<ol class="inhalt-content" style="list-style-type:disc; position: relative; top: -20px;">
-				<li class="lii"><a href="#top">Anfang</a></li>
-				<li class="lii"><a href="#url-aufbau">URL</a></li>
-				<li class="lii"><a href="#dns">DNS</a></li>
-				<li class="lii"><a href="#validator">Validator</a></li>
-				<li class="lii"><a href="#validatorStatus">Sprunglink</a></li>
-			</ol>
-		</p>
-	</div>
+
+		<ol class="inhalt-content" style="list-style-type:disc;">
+				<div style="padding-left: 10px;">
+						<li class="lii"><a class="ai" href="#top">Anfang</a></li>
+						<li class="lii"><a class="ai" href="#url-aufbau">URL</a></li>
+						<li class="lii"><a class="ai" href="#dns">DNS</a></li>
+						<li class="lii"><a class="ai" href="#validator">Validator</a></li>
+						<li class="lii"><a class="ai" href="#validatorStatus">Sprunglink</a></li>
+				</div>
+		</ol>
 
 	<div class="toptitle" id="top" style="background-color: #F5F5F5; height: 70px;">Was ist eine URL?</div>
 	<div class="article">
@@ -136,7 +135,13 @@
 
 	<script>
 		var text = $('#urlArea');
-		text.on('change drop keydown cut paste', () => setTimeout(() => check(), 5));
+		text.keydown((e) => {
+			if(e.keyCode == 13) e.preventDefault();
+			else setTimeout(() => check(), 5);
+		});
+		text.on('change drop keydown cut paste', () => {
+			setTimeout(() => check(), 5);
+		});
 	</script>
 
 

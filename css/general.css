@@ -1,3 +1,5 @@
+@import url('../font/exo.css');
+
 /* style */
 .domain{
   color: #69797E;  /* #5C6BC0 */
@@ -20,27 +22,21 @@ body{
 
 /* -------------------------------------------------------------------------- */
 
-@font-face { font-family: exo; src: url('Exo-Bold.ttf'); }
-
 html{
   scroll-behavior: smooth;
 }
 
 .inhalt-content {
-  display: none;
+  display: block;
   background-color: #f9f9f9;
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
   z-index: 1;
-}
-
-.lii{
-  padding: 5px;
-}
-
-.inhalt:hover .inhalt-content {
-  display: block;
+  position: fixed;
+  top: 218px;
+  left: 0px;
+  width: 100px;
+  transition: width 2s;
 }
 
 .inhalt-title{
@@ -48,10 +44,42 @@ html{
   color: white;
   text-align: center;
   background: #FFA000;
-   top: 0;
-   left: 10px;
-   font-weight: bold;
+  position: fixed;
+  top: 200px;
+  left: 0px;
+  font-weight: bold;
+  width:100px;
+  transition: width 2s;
 }
+
+.inhalt-title:hover{
+  cursor: default;
+  width: 250px;
+}
+
+.inhalt-title:hover ~ .inhalt-content {
+  cursor: default;
+  display: block;
+  width: 250px;
+}
+
+.lii{
+  padding: 5px;
+  padding-left: 10px;
+}
+
+.ai{
+    text-decoration: none;
+    color: gray;
+}
+.ai:hover{
+  text-decoration: none;
+  color: #f44336;
+}
+.lii:hover{
+  color: #f44336;
+}
+
 
 .coloredbox,.coloredbox2{
   width: 99%;
