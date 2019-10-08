@@ -18,14 +18,14 @@
 		/* */
 	</style>
 
-  <script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
 	<script src="js/regex.js" charset="utf-8"></script>
 </head>
 
 <body>
 	<header style="z-index: 5; position:fixed;" class="topbar">_</header>
 
-	<div class="title" id="top" >Was ist eine URL?</div>
+	<div class="title" id="top">Was ist eine URL?</div>
 	<div class="article">
 		<div class="art_title">Der Begriff</div>
 		<p class="text">
@@ -43,9 +43,10 @@
 		<div class="title">Die Bestandteile einer URL</div>
 		<div class="center">
 			<div class="border_url center">
-				<img style="left: -10px; top:12px; position: relative; width: 50px; height:50px" alt="search" src="https://images.vexels.com/media/users/3/132068/isolated/preview/f9bb81e576c1a361c61a8c08945b2c48-search-icon-by-vexels.png">
+				<img style="left: -10px; top:12px; position: relative; width: 50px; height:50px" alt="search" src="img/search.png">
 				<button class="domain" onclick="protokollText()">https://</button>
-				<button class="domain" onclick="domainText()">beispielseite.de/</button>
+				<button class="domain" onclick="domainText()">beispielseite.de</button>
+				<button class="domain" onclick="portText()">:25565/</button>
 				<button class="domain" onclick="pfadText()">seite/</button>
 				<button class="domain" onclick="queryText()">?name=max</button>
 				<button class="domain" onclick="fragmentText()">#top</button>
@@ -66,89 +67,110 @@
 		<p class="text">
 			<b>DNS</b>(Domain Name System) <br>
 			<br>
-			Das DNS sorgt dafür, dass deine eingegebene URL in eine IP-Adresse umgewandelt wird.
+			Das DNS sorgt dafür, dass deine eingegebene URL in eine IP-Adresse umgewandelt wird.<br>
+			Also wird www.example.com zu 192.0.2.44. <br>
+			Diese schickt er zu deinem PC zurück und dein PC stellt dann eine Verbindung zu dieser IP her. <br>
+			Der Server mit dieser IP, schickt dir dann die angeforderte Website, wenn du also youtube.com aufgerufen hast, wir dir das Video angezeigt. <br>
+			Man kann sich das DNS also wie ein Telefonbuch vorstellen. <br>
+			Du kennst den Namen und guckst nach unter welcher Nummer du die Person erreichen kannst. <br>
+			Erst danach rufst du ihn unter dieser Nummer an.
 			<br>
 		</p>
 	</div>
 
-<!-- DNS Animation -->
+	<!-- DNS Animation -->
 	<div class="article" style="margin-top: 50px;">
-	<table class="center" style="margin-bottom: 150px;margin-top: 50px;">
-	<tr>
-	<td>Dein Computer</td><td style="height:50px; text-align: center; position:relative; top:70px;"><p id="webadresse"></p></td><td align="center">DNS</td>
-	</tr>
-	<tr>
-	<td><img style="position:relative;" height="100px" width="100px" src="https://cdn5.vectorstock.com/i/1000x1000/73/59/computer-lcd-monitor-flat-design-vector-20457359.jpg" ></td><td>
-	<div id="square" style="position:relative;  top: 25px;" class="square"></div></td><td>
-	<img style="position:relative; top: 0px;" height="100px" width="100px" src="https://cdn5.vectorstock.com/i/1000x1000/73/59/computer-lcd-monitor-flat-design-vector-20457359.jpg" ></td>
-	</tr>
-	<tr>
-	<td><div style="position:relative; top: 50px;" class="square2" id="square2"></div></td>
-	</tr>
-	<tr>
-	<td><img style="position:relative; top: 50px;" height="100px" width="100px" src="https://cdn5.vectorstock.com/i/1000x1000/73/59/computer-lcd-monitor-flat-design-vector-20457359.jpg" >
-	<td style="position:relative; left: -120px; top: -30px;" id="webadresse2"></td></td>
-	</tr>
+		<table class="center" style="margin-bottom: 150px;margin-top: 50px;">
+			<tr>
+				<td>Dein Computer</td>
+				<td style="height:50px; text-align: center; position:relative; top:70px;">
+					<p id="webadresse"></p>
+				</td>
+				<td align="center">DNS</td>
+			</tr>
+			<tr>
+				<td><img style="position:relative;" height="100px" width="100px" src="https://cdn5.vectorstock.com/i/1000x1000/73/59/computer-lcd-monitor-flat-design-vector-20457359.jpg"></td>
+				<td>
+					<div id="square" style="position:relative;  top: 25px;" class="square"></div>
+				</td>
+				<td>
+					<img style="position:relative; top: 0px;" height="100px" width="100px" src="https://cdn5.vectorstock.com/i/1000x1000/73/59/computer-lcd-monitor-flat-design-vector-20457359.jpg"></td>
+			</tr>
+			<tr>
+				<td>
+					<div style="position:relative; top: 50px;" class="square2" id="square2"></div>
+				</td>
+			</tr>
+			<tr>
+				<td><img style="position:relative; top: 50px;" height="100px" width="100px" src="https://cdn5.vectorstock.com/i/1000x1000/73/59/computer-lcd-monitor-flat-design-vector-20457359.jpg">
+				<td style="position:relative; left: -120px; top: -30px;" id="webadresse2"></td>
+				</td>
+			</tr>
 
-	<tr>
-	<td style="position:relative; top: 50px; text-align:center;">Webserver</td><td></td><td><button style="background-color: white;" height="50px" width="50px" id="myBtn"><img class="myBtn" src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ficon-icons.com%2Ficons2%2F933%2FPNG%2F512%2Fforward-arrow_icon-icons.com_72749.png&f=1&nofb=1" height="50px" width="50px"></img></button></td>
-	</tr>
-	</table>
+			<tr>
+				<td style="position:relative; top: 50px; text-align:center;">Webserver</td>
+				<td></td>
+				<td><button style="background-color: white;" height="50px" width="50px" id="myBtn"><img class="myBtn"
+							src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Ficon-icons.com%2Ficons2%2F933%2FPNG%2F512%2Fforward-arrow_icon-icons.com_72749.png&f=1&nofb=1" height="50px" width="50px"></img></button></td>
+			</tr>
+		</table>
 	</div>
 
 	<article class="coloredbox2">
 		<p class="title">URL Validator</p>
-	  <textarea id="urlArea" class="validator" placeholder="Text hier tippen..."></textarea>
+		<textarea id="urlArea" class="validator" placeholder="Text hier tippen..."></textarea>
 	</article>
 
 	<script>
-	var text = $('#urlArea');
-	text.on('change drop keydown cut paste', function() {
-		text.height('auto');
-		text.height(text.prop('scrollHeight'));
-		check(text);
-	});
+		var text = $('#urlArea');
+		text.on('change drop keydown cut paste', function() {
+			check(text);
+		});
 	</script>
 
 
-		<div class="title">Ein HTML Sprunglink</div>
-		<div class="article">
-			<div class="art_title">Der Begriff</div>
-			<p class="text">
-				Bei einem HTML Sprunglink kann zu einer gewissen Stelle im Text gesprungen werden. <br>
-				Die Stelle zu der gesprungen wird, ist festgelegt durch eine ID. <br>
-				<div class="article2"> Bsp: <br>
-				<<span style="color: blue;"> div </span> id=“zielort“>Ziel < <span style="color: blue;"> div </span> ><br></div>
-				 <br>
-				Danach muss festgelegt werden von wo zu dieser Stelle gesprungen werden soll, also zum Beispiel von einem Inhaltsverzeichnis. <br>
-				Dazu benutzt man den href und schreibt in die Anführungszeichen #id. <br>
-				Für die id wird die id des Zielobjekts eingefügt. <br>
-				<br>
-				<div class="article2" style="margin-top: 50px;"> <<span style="color: green;">a</span> href="#zielort">zum Anfang der Seite <<span style="color: green;">/a</span>> <br> </div>
-				 <br>
-				Wenn man im Body-Tag noch „scroll-behavior: smooth;“ einfügt, sorgt dies für einen scrollenden Übergand anstatt eines Sprunges. <br>
-				<a href="#top">(Ausprobieren)</a><br>
-				 <br>
-				 <div class="article2">
+	<div class="title">Ein HTML Sprunglink</div>
+	<div class="article">
+		<div class="art_title">Der Begriff</div>
+		<p class="text">
+			Bei einem HTML Sprunglink kann zu einer gewissen Stelle im Text gesprungen werden. <br>
+			Die Stelle zu der gesprungen wird, ist festgelegt durch eine ID. <br>
+			<div class="article2"> Bsp: <br>
+				<<span style="color: blue;"> div </span> id=“zielort“>Ziel < <span style="color: blue;"> div </span> ><br>
+			</div>
+			<br>
+			Danach muss festgelegt werden von wo zu dieser Stelle gesprungen werden soll, also zum Beispiel von einem Inhaltsverzeichnis. <br>
+			Dazu benutzt man den href und schreibt in die Anführungszeichen #id. <br>
+			Für die id wird die id des Zielobjekts eingefügt. <br>
+			<br>
+			<div class="article2" style="margin-top: 50px;">
+				<<span style="color: green;">a</span> href="#zielort">zum Anfang der Seite <<span style="color: green;">/a</span>> <br>
+			</div>
+			<br>
+			Wenn man im Body-Tag noch „scroll-behavior: smooth;“ einfügt, sorgt dies für einen scrollenden Übergand anstatt eines Sprunges. <br>
+			<a href="#top">(Ausprobieren)</a><br>
+			<br>
+			<div class="article2">
 				<<span style="color: red;"> style </span> > <br>
 					html{ <br>
-						Scroll-behavior: smooth; <br>
+					Scroll-behavior: smooth; <br>
 					} <br>
-				<<span style="color: red;"> style </span> > <br>
+					<<span style="color: red;"> style </span> > <br>
 
-				<<span style="color: blue;"> div </span> id=“zielort“> Ziel < <span style="color: blue;"> div </span> > <br>
+						<<span style="color: blue;"> div </span> id=“zielort“> Ziel < <span style="color: blue;"> div </span> > <br>
 
-				<<span style="color: green;">a </span> href="#zielort">zum Anfang der Seite<<span style="color: green;">/a</span>> <br>
-			</p>
-		</div>
-		<br>
-		</div>
+						<<span style="color: green;">a </span> href="#zielort">zum Anfang der Seite<<span style="color: green;">/a</span>> <br>
+		</p>
+	</div>
+	<br>
+	</div>
 
 	<script src="js/script.js" charset="utf-8"></script>
 	<footer>
 		<div style="border: solid 3px #F5F5F5; margin-bottom: 0px;background-color: #F5F5F5; padding-top: 10px; padding-bottom: 10px; margin-top: 30px;">
-		<a style="color: gray; text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">von Lukas, Jonas, Viktor und Vincent</a>
-	</div>
+			<a style="color: gray; text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">von Lukas, Jonas, Viktor und Vincent</a>
+		</div>
 	</footer>
 </body>
+
 </html>

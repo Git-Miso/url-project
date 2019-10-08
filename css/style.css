@@ -48,6 +48,7 @@ button.domain{
   font-size: 30px;
   border: none;
   background-color: #EEEEEE;
+  padding-left: 0px;
 }
 
 div.border_url{

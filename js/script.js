@@ -1,10 +1,14 @@
 function protokollText()
 {
-  document.getElementById('text').innerHTML = "Protokoll";
+  document.getElementById('text').innerHTML = "Protokoll ";
 }
 function domainText()
 {
-  document.getElementById('text').innerHTML = "Domain";
+  document.getElementById('text').innerHTML = "Domain ist geil und hat style";
+}
+function portText()
+{
+  document.getElementById('text').innerHTML = "Domain ist geil und hat style";
 }
 function pfadText()
 {
@@ -16,7 +20,7 @@ function queryText()
 }
 function fragmentText()
 {
-  document.getElementById('text').innerHTML = "Fragment";
+  document.getElementById('text').innerHTML = "Das Fragment weist auf eine bestimmte Stelle im Text hin. \n Die Seite springt dann an die Stelle mit dem Objekt des Namens oder der id das dem Fragment enspricht. Also id=ziel entspricht Fragment #ziel. \n Eingesetzt wird das Fragment zum Beispiel bei Sprungstellen.";
 }
 
 
@@ -69,5 +73,8 @@ document.getElementById("myBtn").onclick = function() {
         .innerHTML = neu;
         count = 1;
     break;
+    case 25:
+      alert("bist du hobbylos...=");
+      break;
 };
 };
