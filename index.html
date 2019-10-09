@@ -18,24 +18,24 @@
 		/* */
 	</style>
 
-	<script src="js/jquery-3.4.1.min.js" charset="utf-8"></script>
-	<script src="js/regex.js" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/regex.js"></script>
 </head>
 
 <body>
 	<header style="z-index: 5; position:fixed;" class="topbar">_</header>
 
-		<div class="box-inhalt" style="width: 100px; height: 200px; position:fixed; top: 200px;">
+	<div class="box-inhalt" style="width: 100px; height: 200px; position:fixed; top: 200px;">
 		<div class="inhalt-title">Inhalt</div>
 
 		<ol class="inhalt-content" style="list-style-type:disc;">
-				<div style="padding-left: 10px;">
-						<li class="lii"><a class="ai" href="#top">Anfang</a></li>
-						<li class="lii"><a class="ai" href="#url-aufbau">URL</a></li>
-						<li class="lii"><a class="ai" href="#dns">DNS</a></li>
-						<li class="lii"><a class="ai" href="#validator">Validator</a></li>
-						<li class="lii"><a class="ai" href="#validatorStatus">Sprunglink</a></li>
-				</div>
+
+			<li class="lii"><a class="ai" href="#top">Anfang</a></li>
+			<li class="lii"><a class="ai" href="#url-aufbau">URL</a></li>
+			<li class="lii"><a class="ai" href="#dns">DNS</a></li>
+			<li class="lii"><a class="ai" href="#validator">Validator</a></li>
+			<li class="lii"><a class="ai" href="#validatorStatus">Sprunglink</a></li>
+
 		</ol>
 	</div>
 
@@ -54,7 +54,7 @@
 	</div>
 
 	<article class="coloredbox">
-		<div class="title" style="color:white; font: exo;">Die Bestandteile einer URL</div>
+		<div class="title" style="color:white;">Die Bestandteile einer URL</div>
 		<div class="center">
 			<div class="border_url center">
 				<img style="left: -10px; top:12px; position: relative; width: 50px; height:50px" alt="search" src="img/search.png">
@@ -70,7 +70,7 @@
 		</div>
 		<br>
 		<br>
-		<div id="dns"  class="article" style="background-color: white;">
+		<div id="dns" class="article" style="background-color: white;">
 			<p class="text" id="text">
 				Wähle eins der Elemente aus der URL um genaure Infos zu erhalten.
 			</p>
@@ -98,37 +98,46 @@
 	</div>
 
 	<!-- DNS Animation -->
-	<div class="article" style="margin-top: 50px;" >
+	<div class="article" style="margin-top: 50px;">
 		<table class="center" style="margin-bottom: 150px;margin-top: 50px;">
 			<tr>
 				<td>Dein Computer</td>
 				<td style="height:50px; text-align: center; position:relative; top:70px;">
 					<p id="webadresse"></p>
 				</td>
-				<td align="center">DNS</td>
+				<td class="center">DNS</td>
 			</tr>
 			<tr>
-				<td><img style="position:relative;" height="120px" width="120px" src="img/pc.png" alt="Dein Computer"></td>
+				<td>
+					<img style="position:relative; height: 120px; width: 120px" src="img/pc.png" alt="Dein Computer">
+				</td>
 				<td>
 					<div id="square" style="position:relative;  top: 5px;" class="square"></div>
 				</td>
 				<td>
-					<img style="position:relative; top: 0px;" height="100px" width="100px" src="img/server.png" alt="DNS-Server"></td>
-			</tr>
-			<td>
-				<div style="position:relative; left: 10px; top: 40px;" class="square2" id="square2"></div>
-			</td>
+					<img style="position:relative; top: 0px; height: 100px; width: 100px;" src="img/server.png" alt="DNS-Server">
+				</td>
 			</tr>
 			<tr>
-				<td><img style="position:relative; top: 90px;" height="100px" width="100px" src="img/server.png" alt="Webserver">
-				<td style="position:relative; left: -120px; top: -30px;" id="webadresse2"></td>
+				<td>
+					<div style="position:relative; left: 10px; top: 40px;" class="square2" id="square2"></div>
 				</td>
+				<td></td><td></td>
+			</tr>
+			<tr>
+				<td><img style="position:relative; top: 90px; height: 100px; width: 100px" src="img/server.png" alt="Webserver"></td>
+				<td style="position:relative; left: -120px; top: -30px;" id="webadresse2">
+				</td><td></td>
 			</tr>
 
 			<tr>
 				<td style="position:relative; top: 70px; text-align:center;">Webserver</td>
 				<td style="position:relative; top: 70px; left:205px; text-align:center;">Nächster Schritt</td>
-				<td id="validator" style="position: relative; top: 25px;"><button style="padding: 0px; background-color: white;" height="50px" width="50px" id="myBtn"><img class="myBtn" src="img/arrow.png" height="50px" width="50px" alt="weiter"></img></button></td>
+				<td id="validator" style="position: relative; top: 25px;">
+					<button style="padding: 0px; background-color: white; height: 50px; width: 50px" id="myBtn">
+						<img class="myBtn" src="img/arrow.png" style="height: 50px; width: 50px" alt="weiter">
+					</button>
+				</td>
 		</table>
 	</div>
 
@@ -141,7 +150,7 @@
 	<script>
 		var text = $('#urlArea');
 		text.keydown((e) => {
-			if(e.keyCode == 13) e.preventDefault();
+			if (e.keyCode == 13) e.preventDefault();
 			else setTimeout(() => check(), 5);
 		});
 		text.on('change drop keydown cut paste', () => {
@@ -158,8 +167,8 @@
 			Die Stelle zu der gesprungen wird, ist festgelegt durch eine ID. <br>
 		</p>
 		<div class="article2"> Bsp: <br>
-		<!-- << ist kein Fehler, sondern dient zur Codeanzeige auf der Website -->
-			<<span style="color: blue;"> div </span> id=“zielort“>Ziel < <span style="color: blue;"> div </span> ><br>
+			<!-- << ist kein Fehler, sondern dient zur Codeanzeige auf der Website -->
+			&lt; <span style="color: blue;"> div </span> id=“zielort“>Ziel &lt; <span style="color: blue;"> div </span> ><br>
 		</div>
 		<br>
 		<p class="text">
@@ -168,7 +177,7 @@
 			Für die id wird die id des Zielobjekts eingefügt.
 		</p>
 		<div class="article2" style="margin-top: 50px;">
-			<<span style="color: green;">a</span> href="#zielort">zum Anfang der Seite <<span style="color: green;">/a</span>> <br>
+			&lt; <span style="color: green;">a</span> href="#zielort">zum Anfang der Seite &lt; <span style="color: green;">/a</span>> <br>
 		</div>
 		<br>
 		<p class="text">
@@ -179,23 +188,22 @@
 		<div class="article2">
 			<!-- << ist kein Fehler, sondern dient zur Codeanzeige auf der Website -->
 			<span style="color: red;"> style </span> > <br>
-				html{ <br>
-				Scroll-behavior: smooth; <br>
-				} <br>
-				<<span style="color: red;"> style </span> > <br>
+			html{ <br>
+			Scroll-behavior: smooth; <br>
+			} <br>
+			&lt; <span style="color: red;"> style </span> > <br>
 
-					<<span style="color: blue;"> div </span> id=“zielort“> Ziel < <span style="color: blue;"> div </span> > <br>
+			&lt; <span style="color: blue;"> div </span> id=“zielort“> Ziel &lt; <span style="color: blue;"> div </span> > <br>
 
-							<<span style="color: green;">a </span> href="#zielort">zum Anfang der Seite<<span style="color: green;">/a</span>> <br>
-									</p>
+			&lt; <span style="color: green;">a </span> href="#zielort">zum Anfang der Seite&lt;<span style="color: green;">/a</span>> <br>
 		</div>
 		<br>
 	</div>
 
-	<script src="js/script.js" charset="utf-8"></script>
+	<script src="js/script.js"></script>
 	<footer>
 		<div style="border: solid 3px #F5F5F5; margin-bottom: 0px; padding-bottom: 0px; background-color: #F5F5F5; padding-top: 10px; padding-bottom: 10px; margin-top: 30px;">
-			<a style="padding-left: 10px; color: gray; text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">von Lukas, Jonas, Viktor und Vincent</a>
+			<a style="padding-left: 10px; color: gray; text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">von Lukas, Jonas, Viktor und Vincent</a>
 		</div>
 	</footer>
 </body>
