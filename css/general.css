@@ -38,7 +38,7 @@ html{
 
   width: 68px;
   opacity: 0;
-  transition: width 2s, opacity 2s;
+  transition: width 0.5s, opacity 0.5s;
 }
 
 .inhalt-title{
@@ -52,7 +52,7 @@ html{
   font-weight: bold;
 
   width:100px;
-  transition: width 2s;
+  transition: width 0.5s;
 }
 
 .inhalt-content:hover{
