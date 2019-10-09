@@ -25,6 +25,7 @@
 <body>
 	<header style="z-index: 5; position:fixed;" class="topbar">_</header>
 
+		<div class="box-inhalt" style="width: 100px; height: 200px; position:fixed; top: 200px;">
 		<div class="inhalt-title">Inhalt</div>
 
 		<ol class="inhalt-content" style="list-style-type:disc;">
@@ -36,6 +37,7 @@
 						<li class="lii"><a class="ai" href="#validatorStatus">Sprunglink</a></li>
 				</div>
 		</ol>
+	</div>
 
 	<div class="toptitle" id="top" style="background-color: #F5F5F5; height: 70px;">Was ist eine URL?</div>
 	<div class="article">
@@ -79,14 +81,15 @@
 	<div class="article">
 		<div class="art_title">Der Begriff</div>
 		<p class="text">
-			<b>DNS</b>(Domain Name System) <br>
+			<b>DNS</b> (Domain Name System) <br>
 			<br>
 			Das DNS sorgt dafür, dass deine eingegebene URL in eine IP-Adresse umgewandelt wird.<br>
 			Also wird www.example.com zu 192.0.2.44. <br>
 			Diese schickt er zu deinem PC zurück und dein PC stellt dann eine Verbindung zu dieser IP her. <br>
 			Der Server mit dieser IP, schickt dir dann die angeforderte Website, wenn du also youtube.com aufgerufen hast, wir dir das Video angezeigt. <br>
-			Man kann sich das DNS also wie ein Telefonbuch vorstellen. <br>
-			Du kennst den Namen und guckst nach unter welcher Nummer du die Person erreichen kannst. <br>
+			<br>
+			Man kann sich das DNS also wie ein Telefonbuch vorstellen,
+			du kennst den Namen einer Person und guckst nach unter welcher Nummer du die Person erreichen kannst. <br>
 			Erst danach rufst du ihn unter dieser Nummer an.
 			<br>
 		</p>
@@ -115,21 +118,21 @@
 			</td>
 			</tr>
 			<tr>
-				<td><img style="position:relative; top: 80px;" height="100px" width="100px" src="img/server.png" alt="Webserver">
+				<td><img style="position:relative; top: 90px;" height="100px" width="100px" src="img/server.png" alt="Webserver">
 				<td style="position:relative; left: -120px; top: -30px;" id="webadresse2"></td>
 				</td>
 			</tr>
 
 			<tr>
-				<td style="position:relative; top: 50px; text-align:center;">Webserver</td>
-				<td style="position:relative; top: 50px; left:210px; text-align:center;">Nächster Schritt</td>
-				<td id="validator"><button style="background-color: white;" height="50px" width="50px" id="myBtn"><img class="myBtn" src="img/arrow.png" height="50px" width="50px" alt="weiter"></img></button></td>
+				<td style="position:relative; top: 70px; text-align:center;">Webserver</td>
+				<td style="position:relative; top: 70px; left:205px; text-align:center;">Nächster Schritt</td>
+				<td id="validator" style="position: relative; top: 25px;"><button style="padding: 0px; background-color: white;" height="50px" width="50px" id="myBtn"><img class="myBtn" src="img/arrow.png" height="50px" width="50px" alt="weiter"></img></button></td>
 		</table>
 	</div>
 
 	<article class="coloredbox2">
 		<p class="title" style="color:white; font-weight: bold;">URL Validator</p>
-		<textarea id="urlArea" class="validator" placeholder="Text hier tippen..."></textarea>
+		<textarea id="urlArea" class="validator" placeholder="URL hier eingeben..."></textarea>
 		<p id="validatorStatus" style="color: white"><i>Keine URL erkannt.</i></p>
 	</article>
 

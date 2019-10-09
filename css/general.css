@@ -35,8 +35,10 @@ html{
   position: fixed;
   top: 218px;
   left: 0px;
-  width: 100px;
-  transition: width 2s;
+
+  width: 68px;
+  opacity: 0;
+  transition: width 2s, opacity 2s;
 }
 
 .inhalt-title{
@@ -48,20 +50,30 @@ html{
   top: 200px;
   left: 0px;
   font-weight: bold;
+
   width:100px;
   transition: width 2s;
 }
 
+.inhalt-content:hover{
+  cursor: default;
+  width: 168px;
+  opacity: 100;
+}
+.box-inhalt:hover > .inhalt-title{
+  cursor: default;
+  width: 200px;
+}
 .inhalt-title:hover{
   cursor: default;
-  width: 250px;
+  width: 200px;
+}
+.inhalt-title:hover ~ .inhalt-content{
+  cursor: default;
+  width: 168px;
+  opacity: 100;
 }
 
-.inhalt-title:hover ~ .inhalt-content {
-  cursor: default;
-  display: block;
-  width: 250px;
-}
 
 .lii{
   padding: 5px;
