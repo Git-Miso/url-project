@@ -54,16 +54,18 @@ p.text {
 }
 
 button.domain {
-  font-size: 30px;
+  font-size: 200%;
   border: none;
   background-color: #EEEEEE;
   padding-left: 0px;
+  padding-right: 1%;
 }
 
 div.border_url {
   border-radius: 25px;
   background: #EEEEEE;
-  width: 1300px;
+  /*width: 1300px;*/
+  width: 65%;
   height: 75px;
   box-shadow: 5px 5px 5px grey;
 }

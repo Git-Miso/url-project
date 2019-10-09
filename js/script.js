@@ -55,8 +55,27 @@ document.getElementById("myBtn").onclick = function() {
       break;
   };
 
-  if(count >= 25) {
+  if (count >= 25) {
     count = 0;
     alert("bist du hobbylos...");
   }
 };
+
+(function changeDimensions() {
+  let fontSize;
+  if (screen.width < 1960) fontSize = "20px";
+  else fontSize = "30px";
+
+  let width;
+  if(screen.width < 1200) width = "95%";
+  else width = "65%";
+
+  let elems = document.getElementsByClassName("domain");
+  for (button of elems) {
+    button.style.fontSize = fontSize;
+  }
+
+  document.getElementsByClassName("border_url")[0].style.width = width;
+})();
+
+$(window).on('resize', () => changeDimensions());
