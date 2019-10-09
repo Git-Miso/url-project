@@ -11,13 +11,13 @@ function check(textarea) {
   if(urls == null || urls.length <= 0) {
     display.innerHTML = "<i>Keine URL erkannt.</i>";
   } else if(urls.length == 1) {
-    display.innerHTML = "Erkannte URL:<br><i>" + urls[0] + "</i>";
+    display.innerHTML = "Erkannte URL:<br><i><a href=\"" + url + "\">" + urls[0] + ""\">" + urls[0] + "</a></i>";
   } else {
     let html = "Erkannte URLs:<br>";
     let i = 0;
 
     for (url of urls) {
-      let s = "<i>" + url + "</i>"
+      let s = "<i><a href=\"" + url + "\">" + url + "</a></i>"
 
       if(i == 0) html += s;
       else html += "<br>" + s;
