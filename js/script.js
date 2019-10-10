@@ -12,43 +12,44 @@ function changeText(text) {
   document.getElementById('text').innerHTML = text;
 }
 
+// DNS Animation
 var count = 0;
-document.getElementById("myBtn").onclick = function() {
+document.getElementById("DNS-Btn").onclick = function() {
   count++;
   console.log(count);
 
   switch (count % 5) {
     case 1:
-      var d = document.getElementById("square");
-      d.className += " square_anim";
+      var d = document.getElementById("cabel1");
+      d.className += " cabel1_anim";
       var neu = "youtube.com";
       document.getElementById('webadresse').innerHTML = neu;
       break;
     case 2:
-      var d = document.getElementById("square");
+      var d = document.getElementById("cabel1");
       d.className += "2";
       var neu = "194.0.4.44";
       document.getElementById('webadresse').innerHTML = neu;
       break;
     case 3:
-      var d = document.getElementById("square");
+      var d = document.getElementById("cabel1");
       d.className += "2";
       var neu = "";
       document.getElementById('webadresse').innerHTML = neu;
 
-      var d = document.getElementById("square2");
-      d.className += " square2_anim";
+      var d = document.getElementById("cabel2");
+      d.className += " cabel2_anim";
       var neu = "192.0.4.44";
       document.getElementById('webadresse2').innerHTML = neu;
       break;
     case 4:
-      var d = document.getElementById("square2");
+      var d = document.getElementById("cabel2");
       d.className += "2";
       var neu = "seite.html";
       document.getElementById('webadresse2').innerHTML = neu;
       break;
     case 0:
-      var d = document.getElementById("square2");
+      var d = document.getElementById("cabel2");
       d.className += "2";
       var neu = "";
       document.getElementById('webadresse2').innerHTML = neu;
@@ -61,6 +62,7 @@ document.getElementById("myBtn").onclick = function() {
   }
 };
 
+// Schriftgröße anpassen beim Verändern der Bildschirmgröße
 (function changeDimensions() {
   let fontSize;
   if (screen.width < 1960) fontSize = "20px";

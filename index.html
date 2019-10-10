@@ -14,10 +14,6 @@
 	<link rel="stylesheet" href="css/general.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<style>
-		/* */
-	</style>
-
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/regex.js"></script>
 </head>
@@ -25,16 +21,16 @@
 <body>
 	<header style="z-index: 5; position:fixed;" class="topbar">_</header>
 
-	<div class="box-inhalt" style="width: 100px; height: 200px; position:fixed; top: 200px;">
+	<div class="inhalt-box" style="width: 100px; height: 200px; position:fixed; top: 200px;">
 		<div class="inhalt-title">Inhalt</div>
 
 		<ol class="inhalt-content" style="list-style-type:disc;">
 
-			<li class="lii"><a class="ai" href="#top">Anfang</a></li>
-			<li class="lii"><a class="ai" href="#url-aufbau">URL</a></li>
-			<li class="lii"><a class="ai" href="#dns">DNS</a></li>
-			<li class="lii"><a class="ai" href="#validator">Validator</a></li>
-			<li class="lii"><a class="ai" href="#validatorStatus">Sprunglink</a></li>
+			<li class="inhalt-list"><a class="inhalt-link" href="#top">Anfang</a></li>
+			<li class="inhalt-list"><a class="inhalt-link" href="#url-aufbau">URL</a></li>
+			<li class="inhalt-list"><a class="inhalt-link" href="#dns">DNS</a></li>
+			<li class="inhalt-list"><a class="inhalt-link" href="#validator">Validator</a></li>
+			<li class="inhalt-list"><a class="inhalt-link" href="#validatorStatus">Sprunglink</a></li>
 
 		</ol>
 	</div>
@@ -112,7 +108,7 @@
 					<img style="position:relative; height: 120px; width: 120px" src="img/pc.png" alt="Dein Computer">
 				</td>
 				<td>
-					<div id="square" style="position:relative;  top: 5px;" class="square"></div>
+					<div id="cabel1" style="position:relative;  top: 5px;" class="cabel1"></div>
 				</td>
 				<td>
 					<img style="position:relative; top: 0px; height: 100px; width: 100px;" src="img/server.png" alt="DNS-Server">
@@ -120,22 +116,24 @@
 			</tr>
 			<tr>
 				<td>
-					<div style="position:relative; left: 10px; top: 40px;" class="square2" id="square2"></div>
+					<div style="position:relative; left: 10px; top: 40px;" class="cabel2" id="cabel2"></div>
 				</td>
-				<td></td><td></td>
+				<td></td>
+				<td></td>
 			</tr>
 			<tr>
 				<td><img style="position:relative; top: 90px; height: 100px; width: 100px" src="img/server.png" alt="Webserver"></td>
 				<td style="position:relative; left: -120px; top: -30px;" id="webadresse2">
-				</td><td></td>
+				</td>
+				<td></td>
 			</tr>
 
 			<tr>
 				<td style="position:relative; top: 70px; text-align:center;">Webserver</td>
 				<td style="position:relative; top: 70px; left:205px; text-align:center;">Nächster Schritt</td>
 				<td id="validator" style="position: relative; top: 25px;">
-					<button style="padding: 0px; background-color: white; height: 50px; width: 50px" id="myBtn">
-						<img class="myBtn" src="img/arrow.png" style="height: 50px; width: 50px" alt="weiter">
+					<button style="padding: 0px; background-color: white; height: 50px; width: 50px" id="DNS-Btn">
+						<img class="DNS-Btn" src="img/arrow.png" style="height: 50px; width: 50px" alt="weiter">
 					</button>
 				</td>
 		</table>
