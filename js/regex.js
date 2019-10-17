@@ -1,5 +1,6 @@
 const expression = /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gi;
 const regex = new RegExp(expression);
+const test = null;
 
 function check(textarea) {
   let t = document.getElementById("urlArea").value;
