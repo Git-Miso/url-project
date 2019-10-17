@@ -16,7 +16,6 @@ function changeText(text) {
 var count = 0;
 document.getElementById("DNS-Btn").onclick = function() {
   count++;
-  console.log(count);
 
   switch (count % 5) {
     case 1:
