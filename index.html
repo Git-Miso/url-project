@@ -54,14 +54,14 @@
 			<div class="border_url center">
 				<img style="left: -10px; top:12px; position: relative; width: 50px; height:50px" alt="search"
 					src="img/search.png">
-				<button class="domain" style=" width: 10%;" onclick="changeText(protokollText)">https://</button>
-				<button class="domain" style=" width: 3%;" onclick="changeText(subdomainText)">lu.</button>
-				<button class="domain" style=" width: 15%;" onclick="changeText(domainText)">beispielseite</button>
-				<button class="domain" style=" width: 4%;" onclick="changeText(topdomainText)">.de</button>
-				<button class="domain" style=" width: 10%;" onclick="changeText(portText)">:25565/</button>
-				<button class="domain" style=" width: 20%;" onclick="changeText(pfadText)">seite/index.html</button>
-				<button class="domain" style=" width: 14%;" onclick="changeText(queryText)">?name=max</button>
-				<button class="domain" style=" width: 9%;" onclick="changeText(fragmentText)">#top</button>
+				<button class="domain" style="width: 10%;" onclick="changeText(protokollText)">https://</button>
+				<button class="domain" style="width: 03%;" onclick="changeText(subdomainText)">lu.</button>
+				<button class="domain" style="width: 15%;" onclick="changeText(domainText)">beispielseite</button>
+				<button class="domain" style="width: 04%;" onclick="changeText(topdomainText)">.de</button>
+				<button class="domain" style="width: 10%;" onclick="changeText(portText)">:25565/</button>
+				<button class="domain" style="width: 20%;" onclick="changeText(pfadText)">seite/index.html</button>
+				<button class="domain" style="width: 14%;" onclick="changeText(queryText)">?name=max</button>
+				<button class="domain" style="width: 09%;" onclick="changeText(fragmentText)">#top</button>
 			</div>
 		</div>
 		<br>
@@ -170,8 +170,7 @@
 		</p>
 		<div class="article2"> Bsp: <br>
 			<!-- << ist kein Fehler, sondern dient zur Codeanzeige auf der Website -->
-			&lt; <span style="color: blue;"> div </span> id=“zielort“>Ziel &lt; <span style="color: blue;"> div </span>
-			><br>
+			&lt;<span style="color: blue;">div </span> id=“zielort“>Ziel&lt;/<span style="color: blue;">div</span>><br>
 		</div>
 		<br>
 		<p class="text">
@@ -181,8 +180,7 @@
 			Für die id wird die id des Zielobjekts eingefügt.
 		</p>
 		<div class="article2" style="margin-top: 50px;">
-			&lt; <span style="color: green;">a</span> href="#zielort">zum Anfang der Seite &lt; <span
-				style="color: green;">/a</span>> <br>
+			&lt;<span style="color: green;">a</span> href="#zielort">zum Anfang der Seite&lt;/<span style="color: green;">a</span>><br>
 		</div>
 		<br>
 		<p class="text">
@@ -193,17 +191,19 @@
 		<br>
 		<div class="article2">
 			<!-- << ist kein Fehler, sondern dient zur Codeanzeige auf der Website -->
-			<span style="color: red;"> style </span> > <br>
-			html{ <br>
-			Scroll-behavior: smooth; <br>
-			} <br>
-			&lt; <span style="color: red;"> style </span> > <br>
-
-			&lt; <span style="color: blue;"> div </span> id=“zielort“> Ziel &lt; <span style="color: blue;"> div </span>
-			> <br>
-
-			&lt; <span style="color: green;">a </span> href="#zielort">zum Anfang der Seite&lt;<span
-				style="color: green;">/a</span>> <br>
+			<span style="color: red;">&lt;style</span>><br>
+			&nbsp;&nbsp;html { <br>
+			&nbsp;&nbsp;&nbsp;&nbsp;Scroll-behavior: smooth; <br>
+			&nbsp;&nbsp;} <br>
+			&lt;/<span style="color: red;">style</span>><br>
+			<br>
+			...<br>
+			<br>
+			&lt;<span style="color: blue;">div</span> id=“zielort“>Ziel&lt;/<span style="color: blue;">div</span>><br>
+			<br>
+			...<br>
+			<br>
+			&lt;<span style="color: green;">a</span> href="#zielort">zum Anfang der Seite&lt;<span style="color: green;">/a</span>><br>
 		</div>
 		<br>
 	</div>
