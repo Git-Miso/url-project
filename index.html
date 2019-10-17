@@ -3,11 +3,10 @@
 
 <head>
 	<meta charset="utf-8">
-	<!-- <meta http-equiv="refresh" content="5"> DEBUG -->
 
 	<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <![endif]-->
+    <script src="js/html5shiv.js"></script>
+    <![endif]-->
 
 	<title>URL - Einfache Erklärung</title>
 
@@ -53,7 +52,8 @@
 		<div class="title" style="color:white;">Die Bestandteile einer URL</div>
 		<div class="center">
 			<div class="border_url center">
-				<img style="left: -10px; top:12px; position: relative; width: 50px; height:50px" alt="search" src="img/search.png">
+				<img style="left: -10px; top:12px; position: relative; width: 50px; height:50px" alt="search"
+					src="img/search.png">
 				<button class="domain" style=" width: 10%;" onclick="changeText(protokollText)">https://</button>
 				<button class="domain" style=" width: 3%;" onclick="changeText(subdomainText)">lu.</button>
 				<button class="domain" style=" width: 15%;" onclick="changeText(domainText)">beispielseite</button>
@@ -83,13 +83,15 @@
 			Die IP-Adresse wird benötigt, damit dein Computer weiß an wen er seine Websiteanfrage senden muss. <br>
 			<b>Also wird www.example.com zu 192.0.2.44. </b><br>
 			Diese schickt er zu deinem PC zurück und dein PC stellt dann eine Verbindung zu dieser IP her. <br>
-			Der Server mit dieser IP, schickt dir dann die angeforderte Website, wenn du also youtube.com aufgerufen hast, wird dir ein Video angezeigt. <br>
+			Der Server mit dieser IP, schickt dir dann die angeforderte Website, wenn du also youtube.com aufgerufen
+			hast, wird dir ein Video angezeigt. <br>
 			<br>
 			Man kann sich das DNS also wie ein Telefonbuch vorstellen,
 			du kennst den Namen einer Person und guckst nach unter welcher Nummer du die Person erreichen kannst. <br>
 			Erst danach rufst du die Person unter dieser Nummer an.
 			<br>
-			<br>Übrigens merkt sich dein PC im Cache häufig aufgerufene IP-Adressen, dadurch muss dein PC nicht jedesmal den DNS-Server fragen.
+			<br>Übrigens merkt sich dein PC im Cache häufig aufgerufene IP-Adressen, dadurch muss dein PC nicht jedesmal
+			den DNS-Server fragen.
 		</p>
 	</div>
 
@@ -111,7 +113,8 @@
 					<div id="cabel1" style="position:relative;  top: 5px;" class="cabel1"></div>
 				</td>
 				<td>
-					<img style="position:relative; top: 0px; height: 100px; width: 100px;" src="img/server.png" alt="DNS-Server">
+					<img style="position:relative; top: 0px; height: 100px; width: 100px;" src="img/server.png"
+						alt="DNS-Server">
 				</td>
 			</tr>
 			<tr>
@@ -122,7 +125,8 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td><img style="position:relative; top: 90px; height: 100px; width: 100px" src="img/server.png" alt="Webserver"></td>
+				<td><img style="position:relative; top: 90px; height: 100px; width: 100px" src="img/server.png"
+						alt="Webserver"></td>
 				<td style="position:relative; left: -120px; top: -30px;" id="webadresse2">
 				</td>
 				<td></td>
@@ -166,20 +170,24 @@
 		</p>
 		<div class="article2"> Bsp: <br>
 			<!-- << ist kein Fehler, sondern dient zur Codeanzeige auf der Website -->
-			&lt; <span style="color: blue;"> div </span> id=“zielort“>Ziel &lt; <span style="color: blue;"> div </span> ><br>
+			&lt; <span style="color: blue;"> div </span> id=“zielort“>Ziel &lt; <span style="color: blue;"> div </span>
+			><br>
 		</div>
 		<br>
 		<p class="text">
-			Danach muss festgelegt werden von wo zu dieser Stelle gesprungen werden soll, also zum Beispiel von einem Inhaltsverzeichnis. <br>
+			Danach muss festgelegt werden von wo zu dieser Stelle gesprungen werden soll, also zum Beispiel von einem
+			Inhaltsverzeichnis. <br>
 			Dazu benutzt man den href und schreibt in die Anführungszeichen #id. <br>
 			Für die id wird die id des Zielobjekts eingefügt.
 		</p>
 		<div class="article2" style="margin-top: 50px;">
-			&lt; <span style="color: green;">a</span> href="#zielort">zum Anfang der Seite &lt; <span style="color: green;">/a</span>> <br>
+			&lt; <span style="color: green;">a</span> href="#zielort">zum Anfang der Seite &lt; <span
+				style="color: green;">/a</span>> <br>
 		</div>
 		<br>
 		<p class="text">
-			Wenn man im Body-Tag noch „scroll-behavior: smooth;“ einfügt, sorgt dies für einen scrollenden Übergand anstatt eines Sprunges. <br>
+			Wenn man im Body-Tag noch „scroll-behavior: smooth;“ einfügt, sorgt dies für einen scrollenden Übergand
+			anstatt eines Sprunges. <br>
 			<a href="#top">(Ausprobieren)</a><br>
 		</p>
 		<br>
@@ -191,19 +199,25 @@
 			} <br>
 			&lt; <span style="color: red;"> style </span> > <br>
 
-			&lt; <span style="color: blue;"> div </span> id=“zielort“> Ziel &lt; <span style="color: blue;"> div </span> > <br>
+			&lt; <span style="color: blue;"> div </span> id=“zielort“> Ziel &lt; <span style="color: blue;"> div </span>
+			> <br>
 
-			&lt; <span style="color: green;">a </span> href="#zielort">zum Anfang der Seite&lt;<span style="color: green;">/a</span>> <br>
+			&lt; <span style="color: green;">a </span> href="#zielort">zum Anfang der Seite&lt;<span
+				style="color: green;">/a</span>> <br>
 		</div>
 		<br>
 	</div>
 
-	<script src="js/script.js"></script>
 	<footer>
-		<div style="border: solid 3px #F5F5F5; margin-bottom: 0px; padding-bottom: 0px; background-color: #F5F5F5; padding-top: 10px; padding-bottom: 10px; margin-top: 30px;">
-			<a style="padding-left: 10px; color: gray; text-decoration: none;" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">von Lukas, Jonas, Viktor und Vincent</a>
+		<div
+			style="border: solid 3px #F5F5F5; margin-bottom: 0px; padding-bottom: 0px; background-color: #F5F5F5; padding-top: 10px; padding-bottom: 10px; margin-top: 30px;">
+			<a style="padding-left: 10px; color: gray; text-decoration: none;"
+				href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">von Lukas, Jonas, Viktor und
+				Vincent</a>
 		</div>
 	</footer>
+
+	<script src="js/script.js"></script>
 </body>
 
 </html>
