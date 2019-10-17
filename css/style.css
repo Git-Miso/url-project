@@ -76,6 +76,24 @@ button:hover {
   animation: domain 1s infinite;
 }
 
+table.portTable {
+  margin-top: 5px;
+}
+
+table.portTable th {
+  font-size: 18px;
+  color: white;
+  background: #0099BC;
+  border: black solid 1px;
+  padding: 5px;
+}
+
+table.portTable td {
+  font-size: 18px;
+  border: black solid 1px;
+  padding: 5px;
+}
+
 @keyframes domain {
   0% {
     color: #e57373;
