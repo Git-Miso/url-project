@@ -30,6 +30,7 @@
 			<li class="inhalt-list"><a class="inhalt-link" href="#dns">DNS</a></li>
 			<li class="inhalt-list"><a class="inhalt-link" href="#validator">Validator</a></li>
 			<li class="inhalt-list"><a class="inhalt-link" href="#validatorStatus">Sprunglink</a></li>
+			<li class="inhalt-list"><a class="inhalt-link" href="#wget">Wget</a></li>
 
 		</ol>
 	</div>
@@ -205,6 +206,64 @@
 			<br>
 			&lt;<span style="color: green;">a</span> href="#zielort">zum Anfang der Seite&lt;<span style="color: green;">/a</span>><br>
 		</div>
+		<br>
+	</div>
+
+	<br>
+	<hr id="wget" style="width: 90%">
+
+	<div class="title">Die Anwendung Wget</div>
+	<div class="article">
+		<div class="art_title_small">Wget</div>
+		<p class="text">
+			Wget ist ein freies Konsolentool, um Dateien aus dem Internet herunterzuladen.<br>
+			Es wurde von GNU Projekt im Jahre 1996 entwickelt und wird seither immer noch benutzt.<br>
+			Auf den meisten Unix basierten Betriebssystemen ist Wget meist vorinstalliert, jedoch gibt es auch eine <a href="http://gnuwin32.sourceforge.net/packages/wget.htm">Version für Windows</a>.<br>
+			<br>
+			Zur Zeit unterstützt Wget die Protokolle: HTTP, HTTPS und FTP.<br>
+			Wget wurde dazu entwickelt, große Mengen an Daten herunterzuladen, auch wenn es zwischendurch Netzwerkfehler gibt.<br>
+			Außerdem kann es im Hintergrund laufen, auch wenn man nicht eingeloggt ist.<br>
+			<br>
+			Die Besonderheit von Wget ist die hohe Einstellungsmöglichkeit, mit der man genau beschreiben kann, wie Wget arbeiten soll.<br>
+			Es lässt sich z.B. so einstellen, dass Wget ganze Websites herunterläd, um so eine Offlineversion der Website zu erstellen.<br>
+			Wget kann Links auf der Webseite folgen, und so rekursiv die Website downloaden.
+		</p>
+		<p class="text">
+			<b><u>Gebrauch</u></b><br>
+			Um das Programm zu benutzen, muss man es über eine Konsole ausführen.<br>
+			Bei Unix basierten Betriebssystemen benutzt man z.B. das Terminal
+			und bei Windows z.B. die Eingabeaufforderung bzw. die PowerShell.<br>
+			<br>
+			Wenn man auf Windows arbeitet, ist es wichtig, die <i>wget.exe</i> am Anfang des Befehls zu erwähnen, damit dein PC weiß, welche Datei er ausführen soll.<br>
+			Es empfielt sich daher, den Befehl entweder im gleichen Ordner auszuführen, wo die <i>wget.exe</i> Datei vorhanden ist oder diesen Ordner in den <i>PATH</i> zu schreiben, damit sie von überall gefunden werden kann.<br>
+		</p>
+		<p class="text">
+			<b><u>Syntax</u></b><br>
+			Der Grundlegende Syntax von Wget lautet:
+		</p>
+		<div class="article2 monospace">wget [option]... [URL]...</div>
+		<p class="text">
+			[option]... : hier beschreibt man, wie Wget herunterladen soll. Eine Liste der Optionen erhält mit mit dem Kommando <span class="monospace">wget --help</span><br>
+			<br>
+			[URL]... : Liste von URLs, deren Inhalt Wget herunterladen soll.
+		</p>
+		<p class="text">
+			<b><u>Beispiele</u></b><br>
+			Um z.B. das Logo der Website des Goethe Gymnasiums Lichterfelde herunterzuladen, gibt man folgendes ein:
+		</p>
+		<div class="article2 monospace">wget http://goethe-gymnasium-lichterfelde.de/files/goethe-logo_header.png</div>
+		<p class="text">
+			Dieses eher simple Beispiel lässt sich vergleichen, wie wenn man im Webbrowser auf das Bild rechtsklickt und auf 'Bild speichern' klickt.<br>
+			<br>
+			Wenn man nun die ganze Website des Goethe Gymnasiums herunterladen wollte, könnte man folgendes eingeben:
+		</p>
+		<div class="article2 monospace">wget -r http://goethe-gymnasium-lichterfelde.de/</div>
+		<p class="text">
+			Dies würde alle Inhalte, die irgendwie auf der Website hinterlegt sind herunterladen. (zur Zeit ~1267 Dateien mit zusammen ~446 MB Größe)<br>
+			Man erhält eine völlig offline kompatible Website, die man sich jetzt lokal auf dem Computer ansehen kann.<br>
+			Dieser Schritt ist ähnlich zu dem, was der Webbrowser macht, wenn man die Website aufruft.<br>
+			Der einzige Unterscheid ist, dass der Webbrowser sich nicht gleich die ganze Website herunterläd, sonder nur die Inhalte, die für die momentane Seite relevant sind, läd.
+		</p>
 		<br>
 	</div>
 

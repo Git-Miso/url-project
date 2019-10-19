@@ -35,10 +35,26 @@ div.article2 {
   border-radius: 10px;
 }
 
+.monospace {
+  font-family: monospace;
+}
+
 div.art_title {
   background-color: white;
   position: relative;
   width: 170px;
+  height: 25px;
+  text-align: center;
+  top: -22px;
+  left: 50px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+div.art_title_small {
+  background-color: white;
+  position: relative;
+  width: 80px;
   height: 25px;
   text-align: center;
   top: -22px;
