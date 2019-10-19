@@ -226,10 +226,6 @@ div.error {
   transform: rotate(90deg);
 }
 
-.cabel2:hover {
-  click();
-}
-
 .cabel1_anim {
   background-image: repeating-linear-gradient(-45deg,
       hsl(215, 30%, 60%) 0%,
