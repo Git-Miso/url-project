@@ -61,7 +61,7 @@ document.getElementById("DNS-Btn").onclick = function() {
 };
 
 // Schriftgröße anpassen beim Verändern der Bildschirmgröße
-(function changeDimensions() {
+function changeDimensions() {
   let fontSize;
   if (screen.width < 1960) fontSize = "20px";
   else fontSize = "30px";
@@ -76,6 +76,7 @@ document.getElementById("DNS-Btn").onclick = function() {
   }
 
   document.getElementsByClassName("border_url")[0].style.width = width;
-})();
+};
+changeDimensions();
 
 $(window).on('resize', () => changeDimensions());
