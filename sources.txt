@@ -18,4 +18,5 @@ https://en.wikipedia.org/wiki/Domain_name
 Vincent:
 ---------------------------------------------------------------
 https://www.giga.de/extra/internet/specials/was-ist-dns-dns-server-einfach-erklaert/
-weiter Quellen folgen...
+https://www.dirks-computerecke.de/netzwerk/dns-und-dhcp-einfach-erklaert.htm
+https://www.itwissen.info/DNS-domain-name-system-DNS-System.html
