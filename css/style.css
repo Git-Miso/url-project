@@ -55,6 +55,10 @@ div.art_title {
   font-weight: bold;
 }
 
+div.marginBottom {
+  margin-bottom: 30px;
+}
+
 div.art_title_small {
   background-color: white;
   position: relative;
@@ -143,6 +147,7 @@ header.topbar {
 article {
   margin-top: 100px;
   padding: 10px;
+  font-family: Lucida;
 }
 
 textarea.validator {
@@ -162,4 +167,15 @@ textarea.validator:focus {
 
 p.title {
   font-size: 40px;
+}
+
+img.navBack {
+  float: left;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+a.none {
+  text-decoration: none;
 }
