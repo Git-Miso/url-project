@@ -20,3 +20,4 @@ Vincent:
 https://www.giga.de/extra/internet/specials/was-ist-dns-dns-server-einfach-erklaert/
 https://www.dirks-computerecke.de/netzwerk/dns-und-dhcp-einfach-erklaert.htm
 https://www.itwissen.info/DNS-domain-name-system-DNS-System.html
+https://de.wikipedia.org/wiki/Uniform_Resource_Locator
