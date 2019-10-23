@@ -56,7 +56,7 @@ document.getElementById("DNS-Btn").onclick = function() {
 
   if (count >= 25) {
     count = 0;
-    alert("bist du hobbylos...");
+    alert("ist dir langweilig...?");
   }
 };
 
